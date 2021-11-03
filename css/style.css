@@ -1,0 +1,48 @@
+body{
+    background-color: #9abedb;
+    font-family: 'Montserrat', serif;
+
+}
+h2, h3{ 
+    font-weight: bold;
+}
+header{
+    background-color: #ffe045;
+}
+header h1{
+    text-align: center;
+    font-size: 3em;
+}
+.container{
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    align-items: center;
+    text-align: center;
+    /* Add grid-row-gap */
+    /* Need to make the books the same size
+    Center the content and pictures within the grid
+    Make border around each text box and image
+    Grid gap between every next book */
+}
+nav li{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    
+    /* Transform when clicked on
+    Add little finger pointer when clicked on
+    Need to figure out how to do it when on a page */
+}
+
+/* .backgroundBook{
+    background-image: url("../images/PagePixaby.jpg");
+    background-color: aliceblue; */
+    /* not sure that I like this background- it is a little busy
+    Maybe make it parralax and a different image }*/
+/* Need to style the footer to be centered
+Colored- background and text
+Also need to pick a google font and main text size */
+/* On about me page give images a border
+Shrink them  */
+/* Want flex to be used on the tips page */
