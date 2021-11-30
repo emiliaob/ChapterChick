@@ -6,32 +6,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type= "text/css" href= "css/html5reset.css">
     <link rel="stylesheet" type= "text/css" href= "css/style.css">
-    <link rel= "shortcut icon" type="image/png" href= "images/ChickFavicon.png">
+    <link rel= "shortcut icon" type="image/png" href= "images/chickfavicon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a5a96d5161.js" crossorigin="anonymous"></script>
     <title>About Me</title>
 </head>
 <body>
+    <a class = "skip" href= "#skip">Skip to Main Content</a>
     <header>
-        <h1>The Chapter Chick</h1>
+        <h1>About The Chapter Chick</h1>
         <nav>
             <ul class= navigation>
-                <li class=><a href="bookProject.html">The Thrift Store Book Project</a></li>
+                <li class=><a href="index.html">The Thrift Store Book Project</a></li>
                 <li class=><a href= "reviews.html">My Reviews</a></li>
                 <li class=><a href= "tips.html">Thrift Store Tips</a></li>
-                <li class=><a href= "aboutMe.html">About Me</a></li> 
+                <li class="active"><a href= "aboutMe.html">About Me</a></li> 
+                <!-- :before/ :after in css -->
+                <!-- Look hmwk 6, and use pseudo classes -->
             </ul>   
         </nav>
     </header>
-    <main>
-        <div class= "picture"> <img src="images/O'Brien.jpg" alt="A headshot of Emilia O'Brien"></div>
-        <div class="picture" ><img src= "images/EObook.jpg" alt= "Emilia holding a book in a bookstore"></div>
-        <!-- Add 4 more pictures of yourself -->
+    <main id="skip">
         <div class= bio>
-            <p>My name is Emilia, I am currently a junior in the School of Information at the University of Michigan. I fell in love with reading at a young age, and have always been amazed at the ability of a good book to transport readers into a completely different reality. I worked as an intern at a book store for two years and over that time I fell in learned that used books tell more stories than just the words on their pages. The condidtion, notes in margins, forgotten bookmarks of books reveal anthor layer of the stories they create. I decided that this year to help my bank account  that I would only by 25¢, 50¢, and $1 books from thrift stores. This page tells some of the stories in the books that are now mine.</p>
+            <p>My name is Emilia, I am currently a junior in the School of Information at the University of Michigan. I fell in love with reading at a young age (as you can see in some of the pictures on this page), and have always been amazed at the ability of a good book to transport readers into a completely different reality. I worked as an intern at a book store for two years and over that time I learned that used books tell more stories than just the words on their pages. Their condition, notes in margins, and forgotten bookmarks reveal another layer of complexity greater than the words on their pages. I decided that this year to help my bank account and challenge my imagination that I would only buy 25¢, 50¢, and $1 books from thrift stores. This website tells some of the stories in the books that are now mine.</p>
         </div>
-        <!-- Make this a flip card? -->
+        <div class="all_pictures">
+            <div class= "center dif"> <img src="images/babybook.jpg" alt="Young Emilia reading to a nun"></div>
+            <div class= "picture center"> <img src="images/obrien.jpg" alt="A headshot of Emilia O'Brien"></div>
+            <div class="center rotate"><img src="images/seusseo.jpg" alt= "A young Emilia holding a Dr. Seuss Book"></div>
+            <div class="picture center" ><img src= "images/eobook.jpg" alt= "Emilia holding a book in a bookstore"></div>
+            <div class="center rotate"><img src= "images/littlebook.jpg" alt="Young Emilia holding a book"></div>
+        </div>
         <form action="/action_page.php">
             <label for="fname">First name:</label><br>
             <input type="text" id="fname" name="fname"><br>
@@ -43,7 +50,9 @@
     <footer>
         <p> Emilia O'Brien
             <br>
-            TSB Project Founded 2021
+            The TSB Project 
+            <br>
+            Founded 2021
         </p>
     </footer>  
 </body>
