@@ -48,11 +48,6 @@ header h1{
 nav a{
     display: flex;
 }
-/* nav li{
-    display:flex;
-    flex-direction: column;
-    align-items: center;
-} */
 
 .active{
  text-transform: uppercase;
@@ -71,13 +66,6 @@ div header{
     text-align: center;
 }
 
-/* .all_reviews{
-    display: flex;
-    flex-direction: column;
-    align-content: center;
-    justify-content: center;
-    align-items: center;
-} */
 footer{
     background-color: white;
     height: 80%;
@@ -86,7 +74,7 @@ footer{
 }
 
 img{
-  width: 16em;  
+  width: 18em;  
   border: 2px solid #ffffff;
 }
 
@@ -117,7 +105,7 @@ img{
     display: block;
     margin-left:auto;
     margin-right: auto;
-    width: 50%;
+    /* width: 50%; */
     max-width: 100%;
     height: auto; }
 .picture{
@@ -129,11 +117,10 @@ img{
     border: 2px solid #ffe045;
     text-align: center;
     border-radius: 15px;
-    margin-top: 5px;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 5px auto;
     width: 90% ;   
     background-color: #ffffff;
+
 }
     a.skip{
     background:#96bfff;
@@ -149,6 +136,27 @@ img{
         border-radius: 10px;
         padding: 5px;
     }
+    
+    .buttons{
+        justify-content: center;
+        align-items: center;
+    }
+    button{
+        background-color: #ffffff;
+        color: #000000;
+        padding: 10px 15px;
+        text-align: center;
+        display: inline-block;
+        font-size: 1em;
+        margin: 2px 2px;
+        border: 2px #ffe045 solid;
+        border-radius: 4px;
+    }
+    .all_pictures{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+  
     
 @media screen and (min-width: 648px) {
 
@@ -172,7 +180,7 @@ img{
      /* Editing the grid on the main page to display books next to each other */
  }
  .book{
-     max-height: 400px;
+     max-height: 250px;
      
     /* editing the scrollable size on the main page grid */
  }
@@ -190,14 +198,10 @@ img{
 /* Spreading the nav out */
 }
 .all_pictures{
-    display: grid;
     grid-template-columns: 1fr 4fr 4fr 1fr;
-    /* background-size: cover; */
-    /* Altering the grid for the pictures */
 }
 .center{
     transform: none;
-     width: 20em;
     margin-left:auto;
     margin-right: auto;
 }
@@ -214,11 +218,78 @@ img{
     flex-basis: 300px;
     text-align: center;
 }
+/* .bio{
+    background-image: url(../images/bookpara.jfif);
+    background-repeat: no-repeat;
+    background-size: cover;
+This is the parrallax code- need to find a place to actually put the parralax image though
+} */
 
  }
-@media screen and (min-width: 815px){
+@media screen and (min-width: 850px){
     /* Media Query for desktop view */
+    /* Styling for the nav */
+    .navigation{
+        width: 100%;
+        justify-content: flex-end;
+        padding: 10px;
+    }
+    /* Maybe make the text size bigger? */
+    nav li{
+        margin: 0px 5px;
+    }
+    header h1{
+        display: inline-block;
+        margin-top: 2%;
+    }
+    /* End nav styling */
+    /* Styling for book page */
+    .container{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    /* End styling for the book page */
+    /* Styling for tips page */
+
+    /* End styling for the tips page */
+    /* Styling for the reviews page */
+
+    /* End reviews styling */
+    /* Styling for About me page */
+    .para{
+        background-image: url(../images/chickpara.jfif); /* I got this chick parralax image from https://www.wattagnet.com/articles/39550-france-germany-to-end-male-layer-chick-culling?v=preview */
+        background-repeat: repeat;
+        object-fit: cover;   
+        background-attachment: fixed;
+        position: relative; }   
+    .all_pictures{
+        grid-template-columns: 2fr 1fr 2fr;
+    }
+    .dif{
+        order: 1;
+        grid-column: 2/span 1;
+        /* grid-row: 2/span 1; */
+    }
+    .one{
+        grid-column: 1/span1;
+    }
+    /* End About me styling */
+    .footer{ 
+        position: fixed;
+        bottom: 0;
+    }
+    .tip{
+        flex-basis: 500px;
+    }
 }
+
+
+@media screen and (prefers-reduced-motion: reduce){
+    #logo{ 
+        animation-name: none;
+    }
+/* Media Query to turn off animation NEED to change the logo part */
+}
+
 
 
 
