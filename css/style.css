@@ -1,7 +1,8 @@
 body{
-    background-color: #96bfff;
+    background-color: #CFE6F7;
+
     font-family: 'Montserrat', serif;
-    line-height: 1.25;
+
 
 }
 h2, h3{ 
@@ -17,7 +18,7 @@ header h1{
     text-align: center;
     font-size: 3em;
 }
-.container{
+.container, .container2{
     display: grid;
     grid-template-columns: 1fr;
     justify-items: center;
@@ -28,7 +29,7 @@ header h1{
 }
 
 .book{
-    max-height: 140px;
+    max-height: 200px;
     overflow: scroll;
     width: 90%;
     border: 2px solid #FFFFFF;
@@ -44,9 +45,7 @@ header h1{
     align-items: center;
     text-align: center;
     padding: 10px;
-}
-nav a{
-    display: flex;
+    font-size: 1.10em;
 }
 
 .active{
@@ -75,7 +74,7 @@ footer{
 
 img{
   width: 18em;  
-  border: 2px solid #ffffff;
+  border: 5px solid #ffffff;
 }
 
 
@@ -117,15 +116,16 @@ img{
     border: 2px solid #ffe045;
     text-align: center;
     border-radius: 15px;
-    margin: 5px auto;
+    margin: 10px auto;
+    padding: 10px;
     width: 90% ;   
     background-color: #ffffff;
 
 }
-    a.skip{
-    background:#96bfff;
+    a.skip{ 
+    background-color: #ffe045;
     left: 0;
-    padding: 6px;
+    padding: 6px;   
     position: absolute;
     top: -40px;
     -webkit-transition: top 1s ease-out;
@@ -135,6 +135,8 @@ img{
         border:#ffe045 2px dashed;
         border-radius: 10px;
         padding: 5px;
+        margin: 10px;
+        background-color: #ffffff;
     }
     
     .buttons{
@@ -158,7 +160,7 @@ img{
     }
   
     
-@media screen and (min-width: 648px) {
+@media screen and (min-width: 750px) {
 
  a.skip:focus{
         top:20px;
@@ -167,21 +169,15 @@ img{
         text-decoration-style: solid;
 }
 
- .container2{
-     display: flex;
-     flex-wrap: wrap;
-     padding: 20px;
-     justify-content: space-around; 
-     grid-gap: 5px;
- }
-
- .container{
+ .container, .container2{
      grid-template-columns: 1fr 1fr;
      /* Editing the grid on the main page to display books next to each other */
  }
+ .rev_img{
+     margin: 10px;
+ }
  .book{
-     max-height: 250px;
-     
+     max-height: 250px;  
     /* editing the scrollable size on the main page grid */
  }
  .tip{
@@ -212,35 +208,26 @@ img{
     grid-column: 2 / span 1;
 }
 .reviews{
-    min-height: 200px;
-    overflow: scroll;
-    background-color: #ffffff;
-    flex-basis: 300px;
+    min-height: 400px;
     text-align: center;
 }
-/* .bio{
-    background-image: url(../images/bookpara.jfif);
-    background-repeat: no-repeat;
-    background-size: cover;
-This is the parrallax code- need to find a place to actually put the parralax image though
-} */
-
  }
-@media screen and (min-width: 850px){
+@media screen and (min-width: 900px){
+
     /* Media Query for desktop view */
     /* Styling for the nav */
     .navigation{
         width: 100%;
         justify-content: flex-end;
-        padding: 10px;
+        background-color: #ffe045;
     }
-    /* Maybe make the text size bigger? */
     nav li{
-        margin: 0px 5px;
+        margin: 0px 10px;
     }
     header h1{
         display: inline-block;
-        margin-top: 2%;
+        margin: 2%;
+        /* Maybe change us the margin here- not sure how I feel about it */
     }
     /* End nav styling */
     /* Styling for book page */
@@ -249,10 +236,14 @@ This is the parrallax code- need to find a place to actually put the parralax im
     }
     /* End styling for the book page */
     /* Styling for tips page */
-
+    .tip{
+        flex-basis: 500px;
+    }
     /* End styling for the tips page */
     /* Styling for the reviews page */
-
+    .all_reviews{
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
     /* End reviews styling */
     /* Styling for About me page */
     .para{
@@ -262,24 +253,49 @@ This is the parrallax code- need to find a place to actually put the parralax im
         background-attachment: fixed;
         position: relative; }   
     .all_pictures{
-        grid-template-columns: 2fr 1fr 2fr;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
     }
     .dif{
         order: 1;
         grid-column: 2/span 1;
-        /* grid-row: 2/span 1; */
     }
     .one{
         grid-column: 1/span1;
     }
+   .chick{
+        background-color: #CFE6F7;
+    }
+    /* Flip card styling */
+    .flip-card-container{
+        width: 18em;  
+        height: 100%;
+    } 
+    .flip-card{
+        position: relative;
+        transform-style: preserve-3d;
+        transition: transform 1s;
+    }
+    .flip-front, .flip-back{
+        position: absolute;
+        backface-visibility: hidden;
+        width: 18em;
+        padding: 5px;
+       
+    }
+    .flip-back{
+        transform: rotateY(180deg );
+        background-color: #ffe045; 
+    }
+    .flip-card-container:hover .flip-card{
+        transform: rotateY(180deg);
+    }
+    /* End flip card styling  */
     /* End About me styling */
-    .footer{ 
-        position: fixed;
-        bottom: 0;
-    }
-    .tip{
-        flex-basis: 500px;
-    }
+    /* Start Footer styling */
+
+  
+    /* End footer styling */
 }
 
 
@@ -287,6 +303,12 @@ This is the parrallax code- need to find a place to actually put the parralax im
     #logo{ 
         animation-name: none;
     }
+    /* Need to actually make an animation */
+    .flip-card-container, .flip-card{
+            transform: rotateY(180deg);
+    }
+        
+    
 /* Media Query to turn off animation NEED to change the logo part */
 }
 
