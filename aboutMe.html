@@ -12,11 +12,20 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/a5a96d5161.js" crossorigin="anonymous"></script>
     <title>About Me</title>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XD31W38ZRJ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-XD31W38ZRJ');
+</script>
 </head>
 <body>
     <a class = "skip" href= "#skip">Skip to Main Content</a>
     <header class= "para">
-        <h1>About The Chapter Chick</h1>
+        <h1 class= "chick">About The Chapter Chick</h1>
         <nav>
             <ul class= navigation>
                 <li class=><a href="index.html">The Thrift Store Book Project</a></li>
@@ -31,7 +40,16 @@
             <p>My name is Emilia, I am currently a junior in the School of Information at the University of Michigan. I fell in love with reading at a young age (as you can see in some of the pictures on this page), and have always been amazed at the ability of a good book to transport readers into a completely different reality. I worked as an intern at a book store for two years and over that time I learned that used books tell more stories than just the words on their pages. Their condition, notes in margins, and forgotten bookmarks reveal another layer of complexity greater than the words on their pages. I decided that this year to help my bank account and challenge my imagination that I would only buy 25¢, 50¢, and $1 books from thrift stores. This website tells some of the stories in the books that are now mine.</p>
         </div>
         <div class="all_pictures">
-            <div class= "center dif two"> <img src="images/babybook.jpg" alt="Young Emilia reading to a nun"></div>
+            <div class= "flip-card-container center dif two"> 
+                <div class= "flip-card" tabindex= "0">
+                    <div class= "flip-front">
+                        <div> <img src="images/babybook.jpg" alt="Young Emilia reading to a nun"></div>
+                    </div>
+                    <div class="flip-back">
+                        <p>Literacy is an important tool for success in life! Support your local literacy council by donating your time or money.</p>
+                    </div>
+                 </div>
+            </div>
             <div class= "picture center one "> <img src="images/obrien.jpg" alt="A headshot of Emilia O'Brien"></div>
             <div class="center rotate three"><img src="images/seusseo.jpg" alt= "A young Emilia holding a Dr. Seuss Book"></div>
             <div class="picture center four" ><img src= "images/eobook.jpg" alt= "Emilia holding a book in a bookstore"></div>
