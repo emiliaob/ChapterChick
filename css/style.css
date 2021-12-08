@@ -376,6 +376,9 @@ nav li{
         grid-column: 2/ span 1;
         grid-row:  3/ span 1  ;
     }
+    form{
+        margin: 40px 150px;
+    }
 
     /* End About me styling */
     /* Start Footer styling */
