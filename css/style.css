@@ -1,15 +1,18 @@
 body{
     background-color: #CFE6F7;
-
     font-family: 'Montserrat', serif;
-
-
+}
+#info{
+    background-color:#ffffff;
+    padding: 10px;
+    border-radius: 10px;
 }
 h2, h3{ 
     font-weight: bold;
     width: 90%;
     text-align: center;
-    margin: 5px auto 5px auto;
+    margin: 10px auto 10px auto;
+    border: #ffe045 solid 2px;
 }
 header{
     background-color: #ffe045;
@@ -24,8 +27,29 @@ header h1{
     justify-items: center;
     align-items: center;
     text-align: center;
-    margin: auto;
-   
+    margin: auto; 
+}
+form{
+    background-color: #ffe045;
+    border-radius: 10px;
+    margin: 15%;
+    text-align: left; 
+}
+
+label{
+    font-weight: bold;
+    display: block;
+    padding: 15px;
+
+}
+textarea, input{
+    border: 2px solid #CFE6F7;
+    width: 100%;
+}
+legend{
+    font-size: 1.5em;
+    text-align:center;
+    padding: 5px;
 }
 
 .book{
@@ -84,6 +108,8 @@ img{
     flex-wrap: wrap; 
     justify-content: space-around;
     align-items: center;
+    flex-basis: 300px;
+
     
     
 }
@@ -91,8 +117,8 @@ img{
     margin: 12px;
     padding: 10px;
     background-color: #ffffff;
-    flex-basis: 300px;
     border-radius: 15px;
+    width: 85%;
 
 
 }
@@ -120,7 +146,6 @@ img{
     padding: 10px;
     width: 90% ;   
     background-color: #ffffff;
-
 }
     a.skip{ 
     background-color: #ffe045;
@@ -140,9 +165,10 @@ img{
     }
     
     .buttons{
-        justify-content: center;
-        align-items: center;
+        margin: 0 auto;
+        text-align: center;
     }
+    
     button{
         background-color: #ffffff;
         color: #000000;
@@ -150,10 +176,11 @@ img{
         text-align: center;
         display: inline-block;
         font-size: 1em;
-        margin: 2px 2px;
+        margin: 0em 1em 1em 1em;
         border: 2px #ffe045 solid;
         border-radius: 4px;
     }
+
     .all_pictures{
         display: grid;
         grid-template-columns: 1fr;
@@ -169,10 +196,25 @@ img{
         text-decoration-style: solid;
 }
 
- .container, .container2{
+ .container{
      grid-template-columns: 1fr 1fr;
      /* Editing the grid on the main page to display books next to each other */
  }
+ .chick{
+    background-color: #ffe045;
+}
+.para{
+    background-image: url(../images/chickpara.jfif); /* I got this chick parralax image from https://www.wattagnet.com/articles/39550-france-germany-to-end-male-layer-chick-culling?v=preview */
+    background-repeat: repeat;
+    object-fit: cover;   
+    background-attachment: fixed;
+    position: relative; }   
+nav li{
+    background-color: #CFE6F7;
+    padding: 5px;
+    border-radius: 10px;
+    }
+
  .rev_img{
      margin: 10px;
  }
@@ -181,7 +223,7 @@ img{
     /* editing the scrollable size on the main page grid */
  }
  .tip{
-    height: 300px;
+    height: 250px;
     overflow: scroll;
     /* Making the tips of similar size */
 }
@@ -194,28 +236,77 @@ img{
 /* Spreading the nav out */
 }
 .all_pictures{
-    grid-template-columns: 1fr 4fr 4fr 1fr;
+    grid-template-columns: 4fr 4fr;
 }
+
+
 .center{
     transform: none;
     margin-left:auto;
     margin-right: auto;
 }
+
 .dif{
-    grid-column: 2/ span 2;
+    grid-row-start: 1;
+    grid-column: 1/ span 2;
 }
 .picture{
-    grid-column: 2 / span 1;
-}
+    grid-column: 1 / span 1;}
+
 .reviews{
     min-height: 400px;
     text-align: center;
 }
- }
+.animation{
+    overflow: hidden;
+    width:0;
+    white-space: nowrap;
+    animation-name: typing;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+}
+@keyframes typing{
+    from{ width: 0
+    }
+    to{width: 100%
+    }
+}
+.flip-card-container{
+    width: 18em;  
+    height: 100%;
+} 
+.flip-card{
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 1s;
+    width: 18em;
+    /* height:100%; */
+}
+.flip-front, .flip-back{
+    position: absolute;
+    backface-visibility: hidden;
+    width: 18em;
+    height: 170px;
+    padding: 5px;
+   
+}
+.flip-back{
+    transform: rotateY(180deg );
+    background-color: #ffe045; 
+    text-align: center;
+}
+.flip-card-container:hover .flip-card{
+    transform: rotateY(180deg);
+}
+
+}
 @media screen and (min-width: 900px){
 
     /* Media Query for desktop view */
     /* Styling for the nav */
+    .chick{
+        background-color: #CFE6F7 ;
+    }
     .navigation{
         width: 100%;
         justify-content: flex-end;
@@ -223,6 +314,7 @@ img{
     }
     nav li{
         margin: 0px 10px;
+        background-color: #ffe045;
     }
     header h1{
         display: inline-block;
@@ -233,11 +325,18 @@ img{
     /* Styling for book page */
     .container{
         grid-template-columns: 1fr 1fr 1fr;
+        
+    }
+    .container, .container2{
+        gap: 1.5em;
+    }
+    .book{
+        max-height: 350px;
     }
     /* End styling for the book page */
     /* Styling for tips page */
     .tip{
-        flex-basis: 500px;
+        flex-basis: 400px;
     }
     /* End styling for the tips page */
     /* Styling for the reviews page */
@@ -246,61 +345,53 @@ img{
     }
     /* End reviews styling */
     /* Styling for About me page */
-    .para{
-        background-image: url(../images/chickpara.jfif); /* I got this chick parralax image from https://www.wattagnet.com/articles/39550-france-germany-to-end-male-layer-chick-culling?v=preview */
-        background-repeat: repeat;
-        object-fit: cover;   
-        background-attachment: fixed;
-        position: relative; }   
+ 
     .all_pictures{
         grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 2fr 2fr;
+        gap: 15px;
     }
     .dif{
-        order: 1;
         grid-column: 2/span 1;
-    }
-    .one{
-        grid-column: 1/span1;
-    }
-   .chick{
-        background-color: #CFE6F7;
-    }
-    /* Flip card styling */
-    .flip-card-container{
-        width: 18em;  
-        height: 100%;
-    } 
-    .flip-card{
-        position: relative;
-        transform-style: preserve-3d;
-        transition: transform 1s;
-    }
-    .flip-front, .flip-back{
-        position: absolute;
-        backface-visibility: hidden;
-        width: 18em;
-        padding: 5px;
+        grid-row: 1 span 1;
        
     }
-    .flip-back{
-        transform: rotateY(180deg );
-        background-color: #ffe045; 
+    .one{
+        grid-column: 1 /span 1;
+        grid-row: 2 /span 1;
+        height: 400px;
     }
-    .flip-card-container:hover .flip-card{
-        transform: rotateY(180deg);
+    .one img, .four img{
+        height: 27em;
     }
-    /* End flip card styling  */
+    .five{
+        grid-column: 2/ span 1;
+        grid-row: 2/span1;
+    }
+    .four{
+        grid-row: 2/ span 1;
+        grid-column: 3/ span 1;
+    }
+    .three{
+        grid-column: 2/ span 1;
+        grid-row:  3/ span 1  ;
+    }
+
     /* End About me styling */
     /* Start Footer styling */
 
   
     /* End footer styling */
+    p{
+        font-size: 1.05em;    }
+    .height{
+        height: 100vh;
+    }
 }
 
 
 @media screen and (prefers-reduced-motion: reduce){
-    #logo{ 
+    .animation{ 
         animation-name: none;
     }
     /* Need to actually make an animation */
