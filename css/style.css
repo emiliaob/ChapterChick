@@ -1,6 +1,6 @@
 body{
     background-color: #CFE6F7;
-    font-family: 'Montserrat', serif;
+    font-family: 'Montserrat', sans-serif;
 }
 #info{
     background-color:#ffffff;
@@ -30,6 +30,7 @@ header h1{
     text-align: center;
     margin: auto; 
     width: 90%;
+    gap: 2em;
 }
 form{
     background-color: #ffe045;
@@ -106,14 +107,15 @@ img{
     justify-content: space-around;
     align-items: center;
     flex-basis: 300px; 
+    margin: 20px;
 }
 
 .tip{
-    margin: 12px;
+    margin: 15px;
     padding: 10px;
     background-color: #ffffff;
     border-radius: 15px;
-    width: 85%;
+    width: 80%;
 }
 
 .tip header{
@@ -151,7 +153,7 @@ img{
     border: 2px solid #ffe045;
     text-align: center;
     border-radius: 15px;
-    margin: 10px auto;
+    margin: 20px auto;
     padding: 10px;
     width: 90% ;   
     background-color: #ffffff;
@@ -192,7 +194,8 @@ img{
 
    
     
-@media screen and (min-width: 750px) {
+@media screen and (min-width: 850px) {
+
 
  a.skip:focus{
         top:20px;
@@ -201,12 +204,16 @@ img{
         text-decoration-style: solid;
 }
 
- .container{
+ .container, .container2{
      grid-template-columns: 1fr 1fr;
+     gap: 3em;
      /* Editing the grid on the main page to display books next to each other */
  }
+ 
  .chick{
     background-color: #ffe045;
+    margin-left: 0px;
+    padding-left: 10px;
 }
 .para{
     background-image: url(../images/chickpara.jfif); /* I got this chick parralax image from https://www.wattagnet.com/articles/39550-france-germany-to-end-male-layer-chick-culling?v=preview */
@@ -227,11 +234,6 @@ nav li{
      max-height: 250px;  
     /* editing the scrollable size on the main page grid */
  }
- .tip{
-    height: 250px;
-    overflow: scroll;
-    /* Making the tips of similar size */
-}
 
 .navigation{
     flex-direction: row;
@@ -249,6 +251,7 @@ nav li{
     transform: none;
     margin-left:auto;
     margin-right: auto;
+    margin-top: 20px;
 }
 
 .dif{
@@ -305,7 +308,7 @@ nav li{
 }
 
 }
-@media screen and (min-width: 900px){
+@media screen and (min-width: 1000px){
 
     /* Media Query for desktop view */
     /* Styling for the nav */
@@ -329,12 +332,9 @@ nav li{
     /* End nav styling */
     /* Styling for book page */
     .container{
-        grid-template-columns: 1fr 1fr 1fr;
-        
+        grid-template-columns: 1fr 1fr 1fr;   
     }
-    .container, .container2{
-        gap: 1.5em;
-    }
+
     .book{
         max-height: 350px;
     }
@@ -342,6 +342,7 @@ nav li{
     /* Styling for tips page */
     .tip{
         flex-basis: 400px;
+        height: 350px;
     }
     /* End styling for the tips page */
     /* Styling for the reviews page */
@@ -355,6 +356,7 @@ nav li{
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-rows: 1fr 2fr 2fr;
         gap: 15px;
+      
     }
     .dif{
         grid-column: 2/span 1;
@@ -392,25 +394,26 @@ nav li{
     /* End footer styling */
     p{
         font-size: 1.05em;    }
-    .height{
-        height: 100vh;
-    }
 }
 
 
 @media screen and (prefers-reduced-motion: reduce){
     .animation{ 
-        animation-name: none;
+        animation-name: dissolve;
+        width: 100%;
     }
-    /* Need to actually make an animation */
+    
     .flip-card-container, .flip-card{
             transform: rotateY(180deg);
     }
-        
-    
-/* Media Query to turn off animation NEED to change the logo part */
+    .para{
+        background-attachment: initial;
+    }
+    /* h1{
+        display: visible ;
+    } */
 }
-
+/* div around text? */
 
 
 
