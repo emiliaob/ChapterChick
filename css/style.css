@@ -16,6 +16,7 @@ h2, h3{
 }
 header{
     background-color: #ffe045;
+    margin-bottom: 15px;
 }
 header h1{
     text-align: center;
@@ -28,6 +29,7 @@ header h1{
     align-items: center;
     text-align: center;
     margin: auto; 
+    width: 90%;
 }
 form{
     background-color: #ffe045;
@@ -84,11 +86,6 @@ nav a:visited{
     color: black;
 }
 
-div header{
-    background-color: #FFFFFF;
-    text-align: center;
-}
-
 footer{
     background-color: white;
     height: 80%;
@@ -108,33 +105,45 @@ img{
     flex-wrap: wrap; 
     justify-content: space-around;
     align-items: center;
-    flex-basis: 300px;
-
-    
-    
+    flex-basis: 300px; 
 }
+
 .tip{
     margin: 12px;
     padding: 10px;
     background-color: #ffffff;
     border-radius: 15px;
     width: 85%;
-
-
 }
+
 .tip header{
     border-radius: 10px;
     background-color: #ffe045;
 }
+.all_pictures{
+    display: grid;
+    grid-template-columns: 1fr;
+ 
+}
+.dif{
+    grid-column: 1/ span 1;
+    text-align: center;
+}
+.flip-back{
+    background-color: #ffffff;
+    padding: 30px;
+    width: 90%;
+    margin: 0.5em auto;
+    border: 2px solid #ffe045;
+}
+
 .center{
-    display: block;
     margin-left:auto;
     margin-right: auto;
-    /* width: 50%; */
-    max-width: 100%;
-    height: auto; }
-.picture{
-    transform: rotate(-20deg);
+    max-width: 100%; }
+
+.rotate{
+    transform: rotate(20deg);
 }
 
 
@@ -181,11 +190,7 @@ img{
         border-radius: 4px;
     }
 
-    .all_pictures{
-        display: grid;
-        grid-template-columns: 1fr;
-    }
-  
+   
     
 @media screen and (min-width: 750px) {
 
